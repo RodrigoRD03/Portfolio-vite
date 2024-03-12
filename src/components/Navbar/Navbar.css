@@ -1,0 +1,198 @@
+.app__navbar {
+  background-color: var(--black-web);
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #e6e20e;
+  position: absolute;
+  z-index: 20;
+}
+
+.app__navbar-logo_img {
+  width: 80px;
+  position: relative;
+  z-index: 15;
+}
+
+.app__navbar-logo::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 25px;
+  margin-top: 15px;
+  margin-left: 15px;
+  background: linear-gradient(
+    90deg,
+    rgb(215, 30, 30),
+    rgb(221, 135, 65),
+    rgb(235, 223, 60),
+    rgb(55, 177, 39),
+    rgb(43, 189, 91),
+    rgb(28, 155, 144),
+    rgb(26, 78, 155)
+  );
+  background-size: 400% 400%;
+  animation: anim 2.5s infinite ease-in-out;
+  z-index: 1;
+}
+
+.app__navabr-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar-links {
+  text-decoration: none;
+  position: relative;
+}
+
+.navbar-links p {
+  color: var(--text-100);
+  letter-spacing: 1px;
+}
+
+.navbar-links p::after {
+  content: "";
+  position: absolute;
+}
+
+.navbar-links p {
+  position: relative;
+}
+
+.navbar-links p::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  max-width: 0%;
+  height: 3px;
+  background-color: var(--text-100);
+  display: flex;
+}
+
+.navbar-links p:hover::after {
+  max-width: 100%;
+  animation: hoverLinks 0.5s ease;
+}
+
+.navbar-links p:not(:hover)::after {
+  animation: notHoverLinks 0.5s ease;
+}
+
+
+.app__navabr-content_second-download {
+  background: linear-gradient(
+    90deg,
+    var(--primary-100) 20%,
+    var(--primary-200)
+  );
+  width: 163.72px;
+  height: 49px;
+  display: flex;
+  padding: 15px;
+  gap: 10px;
+  text-decoration: none;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  border-radius: 10px;
+
+  font-family: "Aldrich", sans-serif;
+  color: var(--white-web);
+  font-weight: 600;
+  letter-spacing: 1.5px;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.line {
+  height: 20px;
+  width: 1px;
+  background-color: var(--white-web);
+}
+
+.app__navabr-content_second-download:hover .line,
+.app__navabr-content_second-download:hover p {
+  display: none;
+}
+.app__navabr-content_second-download:hover .icon-download {
+  margin: auto;
+}
+
+.icon-download {
+  font-size: 1.4em;
+}
+
+.icon-check {
+  display: none;
+  margin: auto;
+  font-size: 1.4em;
+  cursor: pointer;
+}
+
+.icon-hamburger {
+  cursor: pointer;
+  display: none;
+  color: var(--text-100);
+  font-size: 1.4em;
+}
+
+.app__navbar-menu_container {
+  position: absolute;
+  background-color: var(--black-web);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  top: 85px;
+  right: 10px;
+  gap: 0.7rem;
+  border-radius: 20px;
+  align-items: flex-end;
+  animation: appear 0.3s;
+  z-index: 10;
+}
+.app__navbar-menu_container a {
+  width: min-content;
+}
+
+@media screen and (max-width: 670px) {
+  .app__navabr-content {
+    display: none;
+  }
+  .app__navbar-logo {
+    margin: auto;
+  }
+  .icon-hamburger {
+    display: grid;
+  }
+}
+
+@media screen and (min-width: 671px) {
+  .app__navbar-menu_container {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .app__navbar-content {
+    display: none;
+  }
+  .app__navbar-logo {
+    margin: auto;
+  }
+  .icon-hamburger {
+    display: grid;
+  }
+}
+
+
+
+@media screen and (min-width: 1280px) {
+  .app__navbar {
+    padding: 10px 200px;
+  }
+}

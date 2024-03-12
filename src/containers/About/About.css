@@ -1,0 +1,166 @@
+.app__about {
+  padding: 20px;
+  display: grid;
+  grid-template:
+    "Title" max-content
+    "Sections" 100% /
+    100%;
+  gap: 20px;
+}
+
+.app__about-title {
+  grid-area: Title;
+}
+
+.app__about-sections {
+  grid-area: Sections;
+  height: 90%;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app__about-sections .section {
+  height: min-content;
+  width: 33%;
+  padding: 20px;
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(21px);
+  background: linear-gradient(90deg, var(--bg-300), var(--bg-200));
+  border-radius: 25px;
+}
+
+.app__about-section_me {
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.app__about-section_me-title,
+.app__about-section_studies-title,
+.app__about-section_hobbies-title {
+  text-align: center;
+}
+
+.app__about-section_me-text,
+.app__about-section_studies-text,
+.app__about-section_hobbies-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.app__about-section_me-text div {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}
+.app__about-section_me-text p {
+  letter-spacing: 1.5px;
+  text-align: justify;
+}
+.icon-mapmarket {
+  color: #f82626;
+  font-size: 1.7em;
+}
+.icon-playcircle {
+  color: #fa9f27;
+  font-size: 1.7em;
+}
+
+.icon-calendarcheck {
+  color: #faec27;
+  font-size: 1.7em;
+}
+.app__about-section_studies {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.app__about-section_studies-grade {
+  display: grid;
+  grid-template:
+    "Titleh Titleh"
+    "Icon Textp";
+  align-items: center;
+  gap: 10px;
+}
+
+.app__about-section_studies-grade .Icon-Studie {
+  grid-area: Icon;
+}
+
+.Icon-Studie {
+  font-size: 1.7em;
+}
+
+.icon-bag {
+  color: #27fafa;
+}
+.icon-school {
+  color: #27befa;
+}
+
+.app__about-section_studies-grade h2 {
+  grid-area: Titleh;
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  align-items: center;
+}
+
+.app__about-section_studies-grade p {
+  grid-area: Textp;
+  letter-spacing: 1px;
+  text-align: justify;
+}
+
+.app__about-section_hobbies {
+  align-self: end;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.app__about-section_hobbies-text div {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+.app__about-section_hobbies-text div {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.app__about-sections .section {
+  color: #ffffff;
+  margin: 0;
+}
+
+@media screen and (max-width: 860px) {
+  .app__about {
+    height: fit-content;
+  }
+  .app__about-sections {
+    height: 90%;
+    flex-direction: column;
+  }
+
+  .app__about-sections .section {
+    height: min-content;
+    width: 100%;
+  }
+
+  .app__about-section_me,
+  .app__about-section_studies,
+  .app__about-section_hobbies {
+    align-self: start;
+  }
+}
